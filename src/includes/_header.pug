@@ -1,0 +1,56 @@
+include _mixins
+block header
+
+    header#header.header
+
+        .container
+
+            .header__inner
+
+                .header__logo
+                    a(href="/")
+                        img.white(src="assets/images/logo.svg", alt="logo")
+                        img.blue(src="assets/images/logo-blue.svg", alt="logo")
+
+                nav.nav
+
+                    .nav__logo
+                        a(href="/")
+                            img(src="assets/images/logo-blue.svg", alt="logo")
+
+                    ul.nav__menu
+
+                        li.nav__menu-item(class= news ? 'active' : false)
+                            a.nav__menu-link(href="news.html") Новости
+
+                        li.nav__menu-item(class= comey ? 'active' : false)
+                            a.nav__menu-link(href="comey.html") косметика comey
+
+                        li.nav__menu-item(class= reviews ? "active" : false)
+                            a.nav__menu-link(href="reviews.html") отзывы
+
+                        li.nav__menu-item(class= about ? "active" : false)
+                            a.nav__menu-link(href="about.html") о компании
+
+                        li.nav__menu-item(class= contacts ? "active" : false)
+                            a.nav__menu-link(href="contacts.html") Контакты
+
+                    .nav__contacts
+                        .nav-phone
+                            .nav-ico
+                                img(src="assets/images/phone.svg", alt="icon" style="width: 18px;")
+                            a(href="tel:8 (800) 551-06-75") 8 (800) 551-06-75
+                        .nav-phone
+                            .nav-ico
+                                img(src="assets/images/whatsapp.svg", alt="icon")
+                            a(href="tel:8 (499) 705-00-10") 8 (499) 705-00-10
+                        .nav-email
+                            a(href="mailto:info@domenname.ru") info@domenname.ru
+
+                    .nav__action-mob
+                        .button-style.button-style--violet(data-fancybox data-src="#popup-form") получить предложение
+
+                .header__burger
+                    span
+                    span
+                    i.fal.fa-times

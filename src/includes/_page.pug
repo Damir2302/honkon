@@ -1,0 +1,87 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+        title= title || 'Page name'
+
+        // Styles::Start
+        include _loadCss
+        // Styles::End
+
+        // Yandex Map
+        if yandexMap == true
+            script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU")
+
+    body(class= bodyClass ? bodyClass : '')
+
+        #page
+
+            // Header::Start
+            block header
+                include _header
+            // Header::End
+
+            // Main::Start
+            main#main
+                block main
+            // Main::End
+
+            // Footer::Start
+            block footer
+                include _footer
+            // Footer::End
+
+        // Popup::Start
+        .popup-form#popup-form
+
+            .popup-form__title заказать <b>Honkon THB</b>
+
+            form(action="/")
+
+                .p-form__container
+
+                    .p-form__main
+
+                        .p-form-row
+                            label Имя*
+                            .input-style
+                                input(type="text" placeholder="Введите ваше имя*" required autocomplete="off")
+
+                        .p-form-row
+                            label Телефон*
+                            .input-style
+                                input(type="tel" placeholder="Телефон*" required autocomplete="off")
+
+                        .p-form-row
+                            label E-mail
+                            .input-style
+                                input(type="email" placeholder="Куда прислать счет?" autocomplete="off")
+
+                        .p-form__check
+
+                            .check-icon
+
+                            p Даю согласие на обработку <br><a href="#">персональных данных</a>
+
+                    .p-form__textarea
+
+                        label Комментарий
+                        .textarea-style
+                            textarea(type="text" placeholder="Введите текст сообщения (это поле не обязательно)")
+
+                        button(type="submit").button-style.button-style--violet заказать <b>Honkon THB</b>
+        // Popup::End
+
+        // SUCCESS::Start
+        .popup-success#popup-success
+            .success-title Спасибо
+            .success-text Ваша заявка принята
+            #success-close.button-style.button-style--violet вернуться на сайт
+        // SUCCESS::End
+
+        // Scripts::Start
+        include _loadScripts
+        // Scripts::End

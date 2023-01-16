@@ -1,0 +1,333 @@
+.header {
+    padding: 30px 5px;
+    position: relative;
+    z-index: 9;
+}
+
+.header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__logo {
+    width: 165px;
+
+    @include breakpoint(lg) {
+        width: 180px;
+    }
+
+    @include breakpoint(xl) {
+        width: 222px;
+    }
+}
+
+.main-page .header__logo img.white,
+.header__logo img.blue {
+    display: block;
+}
+
+.main-page .header__logo img.blue,
+.header__logo img.white {
+    display: none;
+}
+
+.header__burger {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 41px;
+    height: 41px;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.header__burger span ~ span {
+    margin-top: 7px;
+}
+
+.header__burger.opened {
+    background: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 41px;
+    height: 41px;
+    border-radius: 3px;
+    z-index: 9;
+}
+
+.header__burger span {
+    background: #333;
+    display: block;
+    width: 36px;
+    height: 2px;
+}
+
+.main-page .header__burger span {
+    background: #fff;
+}
+
+.header__burger.opened span {
+    display: none;
+}
+
+.header__burger i {
+    display: none;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.header__burger.opened i {
+    display: block;
+}
+
+.nav {
+
+    @include breakpointMax(lg) {
+        padding: 68px 0;
+        background: #fff;
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        max-width: 304px;
+        z-index: 9;
+        overflow-y: scroll;
+        transition: all 0.4s ease;
+    }
+
+    @include breakpoint(lg) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.nav.opened {
+    left: 0;
+}
+
+.nav__logo {
+    padding-left: 30px;
+    width: 222px;
+    box-sizing: content-box;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+
+.nav__menu {
+    margin-top: 45px;
+
+    @include breakpoint(lg) {
+        margin-top: 0;
+        display: flex;
+    }
+}
+
+.nav__menu-item {
+
+    @include breakpointMax(lg) {
+        margin-left: 30px;
+    }
+}
+
+.nav__menu-item ~ .nav__menu-item {
+
+    @include breakpoint(lg) {
+        margin-left: 15px;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 30px;
+    }
+}
+
+.nav__menu-item:hover .nav__menu-link,
+.nav__menu-item.active .nav__menu-link {
+
+    @include breakpoint(lg) {
+        position: relative;
+        color: #083C8B;
+    }
+}
+
+.nav__menu-item.active .nav__menu-link::before {
+
+    @include breakpoint(lg) {
+        content: '';
+        background: #083C8B;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 2px;
+    }
+}
+
+.main-page .nav__menu-item:hover .nav__menu-link {
+
+    @include breakpoint(lg) {
+        color: #E7E7E7;
+    }
+}
+
+.nav__menu-item {
+    border-top: 1px solid #E7E7E7;
+
+    @include breakpoint(lg) {
+        border: none;
+    }
+}
+
+.nav__menu-item:last-child {
+
+    @include breakpointMax(lg) {
+        border-bottom: 1px solid #E7E7E7;
+    }
+}
+
+.nav__menu-link {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #202020;
+
+    @include breakpoint(lg) {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 125%;
+        color: #333;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 16px;
+    }
+}
+
+.main-page .nav__menu-link {
+
+    @include breakpoint(lg) {
+        color: #fff;
+    }
+}
+
+.nav__contacts {
+    margin-top: 55px;
+    padding-left: 30px;
+
+    @include breakpoint(lg) {
+        margin: 0;
+        margin-left: 30px;
+        padding: 0;
+        position: relative;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 54px;
+    }
+}
+
+.nav__contacts a:hover {
+
+    @include breakpoint(lg) {
+        color: #083C8B;
+    }
+}
+
+
+.main-page .nav__contacts a:hover {
+
+    @include breakpoint(lg) {
+        color: #E7E7E7;
+    }
+}
+
+.nav-phone {
+    display: flex;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333333;
+
+    @include breakpoint(lg) {
+        font-size: 14px;
+        line-height: 125%;
+        color: #333;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 16px;
+    }
+}
+
+.main-page .nav-phone {
+
+    @include breakpoint(lg) {
+        color: #FFFFFF;
+    }
+}
+
+.nav-ico {
+    margin-right: 10px;
+    width: 22px;
+    height: 22px;
+
+    @include breakpoint(lg) {
+        margin-right: 20px;
+        display: flex;
+        width: 14px;
+        height: auto;
+    }
+}
+
+.nav-phone ~ .nav-phone {
+    margin-top: 14px;
+
+    @include breakpoint(lg) {
+        margin-top: 4px;
+    }
+}
+
+.nav-email {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333333;
+
+    @include breakpoint(lg) {
+        margin-top: 4px;
+        margin-left: 34px;
+        position: absolute;
+        top: 100%;
+        font-size: 12px;
+        line-height: 15px;
+        color: #333;
+    }
+}
+
+.main-page .nav-email {
+
+    @include breakpoint(lg) {
+        color: #fff;
+    }
+}
+
+.nav__action-mob {
+    margin-top: 30px;
+    margin-left: 30px;
+
+    @include breakpoint(lg) {
+        display: none;
+    }
+}

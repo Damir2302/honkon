@@ -1,0 +1,103 @@
+.comey-section {
+    padding: 40px 0 80px;
+    background: url('../images/1642951311_23-phonoteka-org-p-belo-serii-fon-24 1.png') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+
+    @include breakpoint(lg) {
+        padding: 90px 0 50px;
+    }
+}
+
+.comey {
+
+    @include breakpoint(lg) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.comey__text {
+
+    @include breakpoint(lg) {
+        max-width: 670px;
+    }
+}
+
+.comey__text p {
+
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+}
+
+.comey__img {
+    margin: 30px auto 0;
+    max-width: 340px;
+
+    @include breakpoint(lg) {
+        max-width: 476px;
+    }
+}
+
+.comey-slider {
+    padding: 40px 0;
+
+    @include breakpoint(lg) {
+        padding: 70px 0 100px;
+    }
+}
+
+.comey-slider__title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpoint(lg) {
+        font-size: 32px;
+        line-height: 39px;
+    }
+}
+
+.comey-slider__subtitle {
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #000000;
+    opacity: 0.7;
+}
+
+.comey-swiper {
+    margin-top: 20px;
+
+    @include breakpoint(lg) {
+        margin-top: 70px;
+    }
+}
+
+.comey__slide-img {
+    padding: 20px;
+    border: 1px solid #BDBDBD;
+    border-radius: 14px;
+    cursor: pointer;
+}
+
+.comey-slider-pagination {
+    margin-top: 30px;
+    text-align: center;
+
+    @include breakpoint(lg) {
+        margin-top: 40px;
+    }
+}
+
+.comey-slider-pagination span {
+    background: linear-gradient(90deg, #A776FF 0%, #7F62B2 98.74%);
+    width: 35px;
+    height: 3px;
+    border-radius: 0;
+}

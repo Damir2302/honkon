@@ -1,0 +1,79 @@
+---
+title: Honkon | Косметика Comey
+comey: true
+---
+
+extends includes/_page
+
+block main
+
+    include components/_breadcrumbs
+    +breadcrumbs('cosmetik-bg.jpg', 'Косметика Comey', 'Косметика Comey')
+
+    .comey-section
+
+        .container
+
+            .comey
+
+                .comey__text
+                    p <b>В связи с высокой популярноcтью фракционных методик лазерного омоложения, все чаще стали возникать проблемы послеоперационного воспаления, пигментации после процедур лазерной шлифовки.</b>
+                    br
+                    br
+                    p Компания Honkon создала уникальную сыворотку D3 на основе полисахарида кактуса, гиалуроновой кислоты, сквалена, глицирризиновая кислота, экстракт серебра.
+                      br
+                      br
+                      |Она уменьшает синтез меланина, отбеливает кожу, увлажняет.
+                    br
+                    br
+                    p(style="font-size: 14px;") <b>Полисахарид кактуса</b> укрепляет иммунитет кожи, лечит воспаление, способствует регенерации и заживлению клеток, делает кожу упругой.
+                      br
+                      br
+                      <b>Гиалуроновая кислота, сквален</b> для увлажнения и омоложения кожи.
+                      br
+                      br
+                      <b>Глицирризиновая кислота</b> противовоспалительное вещество.
+                      br
+                      br
+                      <b>Экстракт серебра</b> обладает отличными бактерицидными и противосполительными свойствами
+
+                .comey__img
+
+                    img(src="assets/images/comey.png", alt="img")
+
+    .comey-slider
+
+        .container
+
+            .comey-slider__title Пример использования
+            .comey-slider__subtitle до и после применения
+
+            .comey-swiper.swiper
+
+                .swiper-wrapper
+
+                    .comey__slide.swiper-slide
+                        .comey__slide-img(data-fancybox data-src="assets/images/1642951313.jpg")
+                            img(src="assets/images/1642951313.jpg", alt="img")
+
+                    .comey__slide.swiper-slide
+                        .comey__slide-img(data-fancybox data-src="assets/images/164295132213.jpg")
+                            img(src="assets/images/164295132213.jpg", alt="img")
+
+                    .comey__slide.swiper-slide
+                        .comey__slide-img(data-fancybox data-src="assets/images/164295222.jpg")
+                            img(src="assets/images/164295222.jpg", alt="img")
+
+                    .comey__slide.swiper-slide
+                        .comey__slide-img(data-fancybox data-src="assets/images/1642951313.jpg")
+                            img(src="assets/images/1642951313.jpg", alt="img")
+
+                    .comey__slide.swiper-slide
+                        .comey__slide-img(data-fancybox data-src="assets/images/164295132213.jpg")
+                            img(src="assets/images/164295132213.jpg", alt="img")
+
+                    .comey__slide.swiper-slide
+                        .comey__slide-img(data-fancybox data-src="assets/images/164295222.jpg")
+                            img(src="assets/images/164295222.jpg", alt="img")
+
+                .comey-slider-pagination

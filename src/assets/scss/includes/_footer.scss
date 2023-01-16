@@ -1,0 +1,109 @@
+.footer {
+    padding: 40px 0;
+    border-top: 1px solid #E0E0E0;
+
+    @include breakpoint(lg) {
+        padding: 0;
+    }
+}
+
+.footer__inner {
+    text-align: center;
+
+    @include breakpoint(lg) {
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #E0E0E0;
+    }
+}
+
+.footer__logo {
+    margin: 0 auto;
+    max-width: 400px;
+
+    @include breakpoint(lg) {
+        margin: 0;
+        max-width: 180px;
+    }
+
+    @include breakpoint(xl) {
+        max-width: 222px;
+    }
+}
+
+.footer__nav {
+    margin: 38px 0;
+
+    @include breakpoint(lg) {
+        margin: 0;
+    }
+}
+
+.footer__nav ul {
+
+    @include breakpoint(lg) {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.footer__nav-item ~ .footer__nav-item {
+
+    @include breakpointMax(lg) {
+        margin-top: 12px;
+    }
+
+    @include breakpoint(lg) {
+        margin-left: 20px;
+    }
+}
+
+.footer__nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #333333;
+
+    @include breakpoint(lg) {
+        font-size: 14px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 16px;
+    }
+}
+
+.footer__nav-item:hover .footer__nav-link,
+.footer__nav-item.active .footer__nav-link {
+
+    @include breakpoint(lg) {
+        position: relative;
+        color: #083C8B;
+    }
+}
+
+.footer__nav-item.active .footer__nav-link::before {
+
+    @include breakpoint(lg) {
+        content: '';
+        background: #083C8B;
+        position: absolute;
+        top: -42px;
+        width: 100%;
+        height: 2px;
+    }
+
+    @include breakpoint(xl) {
+        top: -44px;
+    }
+}
+
+.footer__contacts {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333333;
+}

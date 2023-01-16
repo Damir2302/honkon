@@ -1,0 +1,32 @@
+include _mixins
+block footer
+
+    footer#footer.footer
+
+        .container
+
+            .footer__inner
+
+                .footer__logo
+                    a(href="/")
+                        img(src="assets/images/logo-blue.svg", alt="logo")
+
+                .footer__nav
+                    ul
+                        li.footer__nav-item(class= news ? 'active' : false)
+                            a.footer__nav-link(href="news.html") Новости
+
+                        li.footer__nav-item(class= comey ? 'active' : false)
+                            a.footer__nav-link(href="comey.html") косметика comey
+
+                        li.footer__nav-item(class= reviews ? "active" : false)
+                            a.footer__nav-link(href="reviews.html") отзывы
+
+                        li.footer__nav-item(class= about ? "active" : false)
+                            a.footer__nav-link(href="about.html") о компании
+
+                        li.footer__nav-item(class= contacts ? "active" : false)
+                            a.footer__nav-link(href="contacts.html") Контакты
+
+                .footer__contacts
+                    a(href="tel:8 (800) 551-06-75") 8 (800) 551-06-75

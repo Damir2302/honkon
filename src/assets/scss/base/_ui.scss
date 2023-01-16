@@ -1,0 +1,172 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    -webkit-text-size-adjust: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body.overflow-hidden {
+    overflow: hidden;
+}
+
+body b {
+    font-weight: 700;
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+
+    @include breakpoint(lg) {
+        width: 2px;
+        height: 10px;
+    }
+}
+
+::-webkit-scrollbar-track {
+    background: #f7f7f7;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+main {
+    min-height: calc(max(calc(100vh - 614px), 650px));
+
+    @include breakpoint(md) {
+        min-height: calc(max(calc(100vh - 614px), 570px));
+    }
+}
+
+.hide {
+    display: none!important;
+}
+
+#page {
+    position: relative;
+    min-width: 280px;
+    min-height: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#page::before {
+    content: '';
+}
+
+#page.bg-overlay::before {
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    transition: all 0.5s ease;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+    max-width: 1260px;
+    box-sizing: border-box;
+
+    @include breakpoint(lg) {
+        padding: 0 30px;
+    }
+}
+
+input {
+    background: transparent;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    box-sizing: content-box;
+}
+
+textarea {
+    background: transparent;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    box-sizing: content-box;
+}
+
+.button-style {
+    padding: 16px 14px;
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+
+    @include breakpoint(xl) {
+        padding: 15px 40px;
+    }
+}
+
+.button-style--violet {
+    background: linear-gradient(90deg, #A776FF 0%, #7F62B2 98.74%);
+}
+
+.button-style--transparent {
+    border: 1px solid #FFFFFF;
+}
+
+.input-style  {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #E0E0E0;
+}
+
+.input-style input {
+    height: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #222;
+    box-sizing: border-box;
+}
+
+.input-style input::placeholder {
+    font-size: 16px;
+    color: #999999;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.textarea-style {
+    border: 1.5px solid #E0E0E0;
+}
+
+.textarea-style textarea {
+    padding: 11px 15px;
+}
+
+.textarea-style textarea::placeholder {
+    max-width: 175px;
+    font-size: 12px;
+    line-height: 150%;
+    color: #828282;
+}
