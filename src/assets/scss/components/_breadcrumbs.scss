@@ -30,6 +30,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
     z-index: 1;
 }
 
@@ -48,10 +50,15 @@
 .page-title {
     margin-top: 15px;
     font-weight: 500;
-    font-size: 40px;
-    line-height: 49px;
+    font-size: 26px;
+    line-height: 30px;
     color: #FFFFFF;
     text-align: center;
+
+    @include breakpoint(md) {
+        font-size: 40px;
+        line-height: 49px;
+    }
 
     @include breakpoint(lg) {
         font-size: 64px;

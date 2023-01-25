@@ -22,4 +22,19 @@ $(document).ready(function() {
     }
 
     openMobMenu();
+
+    $('#success-close').on("click", function(e) {
+        $('.is-close').trigger('click')
+    })
+
+    // Header scroll::Start
+    $(window).on('scroll', function() {
+        if ($(window).scrollTop() > $('header').height()) {
+          $('header').addClass('header-fixed')
+        } else if ($(window).scrollTop() == 0) {
+          $('header').removeClass('header-fixed')
+        }
+    })
+    // Header scroll::End
+
 });

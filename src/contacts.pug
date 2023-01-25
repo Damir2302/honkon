@@ -1,6 +1,7 @@
 ---
 title: Honkon | Контакты
 contacts: true
+yandexMap: true
 ---
 
 extends includes/_page
@@ -9,3 +10,99 @@ block main
 
     include components/_breadcrumbs
     +breadcrumbs('contacts-bg.jpg', 'Контакты', 'Контакты')
+
+    .contacts-section
+
+        .container
+
+            .contacts
+
+                .contacts__top
+
+                    .contacts__top-block.contact-block
+                        .contacts__top-title Контактные данные
+                        .contacts__top-wrap
+                            .nav-phone
+                                .nav-ico
+                                    img(src="assets/images/phone.svg", alt="icon" style="width: 18px;")
+                                a(href="tel:8 (800) 551-06-75") 8 (800) 551-06-75
+                            .nav-phone
+                                .nav-ico
+                                    img(src="assets/images/whatsapp.svg", alt="icon")
+                                a(href="tel:8 (499) 705-00-10") 8 (499) 705-00-10
+                            .nav-email
+                                .nav-ico
+                                    img(src="assets/images/envelope.svg", alt="icon")
+                                a(href="mailto:info@domenname.ru") info@domenname.ru
+
+                    .contacts__top-block.address-block
+                        .contacts__top-title Адрес на карте
+                        .contacts__top-wrap
+                            p Москва, поселение Московский, город Московский, улица Хабарова, дом 2, офис 509
+
+                    .contacts__top-block.gps-block
+                        .contacts__top-title GPS координаты
+                        .contacts__top-wrap
+                            p 55.593868, 37.351896
+
+                .contacts__middle
+
+                    .contacts__form
+
+                        .contacts__form-title Форма обратной связи
+
+                        form(action="/")
+
+                            .p-form__container
+
+                                .p-form__main
+
+                                    .p-form-row
+                                        .input-style
+                                            input(type="text" placeholder="Введите ваше имя*" required autocomplete="off")
+
+                                    .p-form-row
+                                        .input-style
+                                            input(type="email" placeholder="E-mail*" autocomplete="off")
+
+                                    .p-form-row
+                                        .input-style
+                                            input(type="tel" placeholder="Телефон*" required autocomplete="off")
+
+                                    .p-form__check
+
+                                        .check-icon
+
+                                        p Даю согласие на обработку <br><a href="#">персональных данных</a>
+
+                                .p-form__textarea
+
+                                    .textarea-style
+                                        textarea(type="text" placeholder="Введите текст сообщения")
+
+                                    button(type="submit").button-style.button-style--violet Отправить вопрос
+
+                    .contacts__map
+                        #map
+
+                .contacts__bottom
+
+                    .contacts__bottom-title Демонстрационные залы медицинского оборудования
+
+                    .contacts__address
+
+                        ul
+                            li
+                                i.fal.fa-location-dot
+                                p г. Москва, ул. Складочная, 1 стр7
+                            li
+                                i.fal.fa-location-dot
+                                p г. Москва, ул. Олимпийский проспект, 16с5
+
+                        ul
+                            li
+                                i.fal.fa-location-dot
+                                p г. Москва, ул. Пресненская набережная, д6с2
+                            li
+                                i.fal.fa-location-dot
+                                p г. Москва, ул. Научный проспект 8с1

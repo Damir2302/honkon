@@ -1,34 +1,39 @@
 $(document).ready(function() {
 
-    // Yandex карта на главной,
-    if ($('#map').length) {
+    // Yandex карта page contacts
 
-        ymaps.ready(function () {
-            let coordArr = document.getElementById('map').dataset.coord.split(',').map(function(item) { return parseFloat(item) });
-            var myMap = new ymaps.Map('map', {
-                    center: [56.170526, 40.415482],
-                    zoom: 15,
+
+    if($("#map").length) {
+
+        function addYaMaps() {
+            var myMap;
+            ymaps.ready(init);
+
+            function init() {
+                myMap = new ymaps.Map('map', {
+                    center: [55.594157, 37.352406],
+                    zoom: 16,
                     controls: []
-                }, {
-                    searchControlProvider: 'yandex#search'
                 }),
+                    myPlacemark = new ymaps.Placemark([55.593857, 37.351900], {
+                        // balloonContentHeader: '',
+                        balloonContentBody: "text",
+                        // balloonContentFooter: "+7 (925) 603-78-22<br>+7 (926) 263-02-69<br>info@magixkalyan.ru",
 
-                myPlacemark = new ymaps.Placemark(coordArr, {
-                    iconContent: '<div style="background: #fff;width: 134px;padding: 5px 8px;height: 15px;border-radius: 15px;margin-top: -4px;margin-left: 20px;">Выставочная площадка</div>'
-                }, {
-                    // Опции.
-                    // Необходимо указать данный тип макета.
-                    preset: 'islands#icon',
-                    iconColor: 'red'
-                });
+                    }, {
+                        // iconLayout: 'default#image',
+                        // iconImageHref: '/local/templates/avangard/images/map-pin.svg',
+                        // iconImageSize: [30, 42],
+                        // iconImageOffset: [-37, -45],
+                        // balloonOffset: [-25, -5]
+                    });
+                myMap.geoObjects.add(myPlacemark);
+                ymapsTouchScroll(myMap, {preventScroll: true, preventTouch: true});
+            }
+        }
 
-            myMap.geoObjects
-                .add(myPlacemark);
-
-            myMap.behaviors.disable('scrollZoom')
-            myMap.setBounds(myMap.geoObjects.getBounds(), {checkZoomRange:true}).then(function(){ if(myMap.getZoom() > 15) myMap.setZoom(15)} )
-        });
-
+        addYaMaps();
     }
 
 })
+

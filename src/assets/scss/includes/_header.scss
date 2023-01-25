@@ -4,6 +4,20 @@
     z-index: 9;
 }
 
+header.header-fixed {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    transition: all 0.5s ease;
+}
+
+.overflow-hidden header.header-fixed {
+    background: #7c7c7c;
+}
+
 .header__inner {
     display: flex;
     align-items: center;
@@ -29,6 +43,14 @@
 
 .main-page .header__logo img.blue,
 .header__logo img.white {
+    display: none;
+}
+
+.header-fixed .header__logo img.blue {
+    display: block;
+}
+
+.header-fixed .header__logo img.white {
     display: none;
 }
 
@@ -69,6 +91,10 @@
 
 .main-page .header__burger span {
     background: #fff;
+}
+
+.header-fixed .header__burger span {
+    background: #333;
 }
 
 .header__burger.opened span {
@@ -172,7 +198,14 @@
 .main-page .nav__menu-item:hover .nav__menu-link {
 
     @include breakpoint(lg) {
-        color: #E7E7E7;
+        color: #083C8B;
+    }
+}
+
+.header-fixed .nav__menu-item:hover .nav__menu-link {
+
+    @include breakpoint(lg) {
+        color: #083C8B;
     }
 }
 
@@ -221,6 +254,13 @@
     }
 }
 
+.header-fixed .nav__menu-link {
+
+    @include breakpoint(lg) {
+        color: #333;
+    }
+}
+
 .nav__contacts {
     margin-top: 55px;
     padding-left: 30px;
@@ -252,6 +292,13 @@
     }
 }
 
+.header-fixed .nav__contacts a:hover {
+
+    @include breakpoint(lg) {
+        color: #083C8B;
+    }
+}
+
 .nav-phone {
     display: flex;
     font-weight: 500;
@@ -274,6 +321,13 @@
 
     @include breakpoint(lg) {
         color: #FFFFFF;
+    }
+}
+
+.header-fixed .nav-phone {
+
+    @include breakpoint(lg) {
+        color: #333;
     }
 }
 
@@ -320,6 +374,13 @@
 
     @include breakpoint(lg) {
         color: #fff;
+    }
+}
+
+.header-fixed .nav-email {
+
+    @include breakpoint(lg) {
+        color: #333;
     }
 }
 

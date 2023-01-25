@@ -1,0 +1,41 @@
+.pagination {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include breakpoint(lg) {
+        margin-top: 58px;
+    }
+}
+
+.page-numbers {
+    margin-right: 10px;
+    padding: 5px;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 140%;
+    color: #C9C9C9;
+    cursor: pointer;
+    user-select: none;
+}
+
+.page-numbers.current {
+    color: #222;
+}
+
+.page-numbers.next {
+    margin-left: 18px;
+    margin-right: 0;
+    background: linear-gradient(90deg, #A776FF 0%, #7F62B2 98.74%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37px;
+    height: 40px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: #FFFFFF;
+    border-radius: 3px;
+}

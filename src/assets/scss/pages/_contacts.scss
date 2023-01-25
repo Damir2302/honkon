@@ -1,0 +1,220 @@
+.contacts-section {
+    padding: 38px 0;
+
+    @include breakpoint(lg) {
+        padding: 100px 0 88px;
+    }
+}
+
+.contacts__top {
+
+    @include breakpoint(lg) {
+        display: flex;
+    }
+}
+
+.contacts__top-block:first-child {
+
+    @include breakpoint(lg) {
+        margin-right: 20px;
+        width: 50%;
+    }
+}
+
+.contacts__top-block ~ .contacts__top-block {
+    margin-top: 40px;
+
+    @include breakpoint(lg) {
+        margin-top: 0;
+        width: 25%;
+    }
+}
+
+.contacts__top-title {
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #4B4B4B;
+
+    @include breakpoint(lg) {
+        margin-bottom: 45px;
+    }
+
+    @include breakpoint(xl) {
+        font-size: 24px;
+    }
+}
+
+.contacts__top-wrap .nav-email {
+    margin: 5px 0 0;
+    position: relative;
+    display: flex;
+    font-size: 16px;
+}
+
+.contacts__top-wrap .nav-ico {
+
+    @include breakpointMax(lg) {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+.address-block {
+
+    @include breakpointMax(lg) {
+        max-width: 400px;
+    }
+}
+
+.address-block p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #4B4B4B;
+}
+
+.gps-block {
+
+    @include breakpointMax(lg) {
+        max-width: 400px;
+    }
+
+    @include breakpoint(lg) {
+        padding-left: 20px;
+    }
+}
+
+.gps-block p {
+    padding: 25px 40px;
+    border: 1px solid #E8E8E8;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.contacts__middle {
+    margin-top: 40px;
+
+    @include breakpoint(lg) {
+        margin-top: 65px;
+        display: flex;
+    }
+}
+
+.contacts__form {
+
+    @include breakpointMax(lg) {
+        max-width: 700px;
+    }
+
+    @include breakpoint(lg) {
+        margin-right: 20px;
+        width: 50%;
+    }
+}
+
+.contacts__form-title {
+    margin-bottom: 45px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 150%;
+    color: #4B4B4B;
+}
+
+.contacts__form .p-form__main {
+
+    @include breakpoint(lg) {
+        margin-right: 20px;
+    }
+}
+
+.contacts__form .p-form__check {
+
+    @include breakpointMax(lg) {
+        margin-top: 30px;
+        position: static;
+    }
+
+    @include breakpoint(lg) {
+        margin-top: 75px;
+    }
+}
+
+.contacts__form .button-style {
+
+    @include breakpointMax(lg) {
+        width: 100%;
+        max-width: 285px;
+    }
+}
+
+.contacts__map {
+    margin-top: 70px;
+    width: 100%;
+
+    @include breakpoint(lg) {
+        margin-top: 0;
+        width: 50%;
+    }
+}
+
+#map {
+    width: 100%;
+    height: 226px;
+
+    @include breakpoint(lg) {
+        height: 380px;
+    }
+}
+
+.contacts__bottom {
+    margin-top: 40px;
+
+    @include breakpoint(lg) {
+        margin-top: 90px;
+    }
+}
+
+.contacts__bottom-title {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 150%;
+    color: #4B4B4B;
+
+    @include breakpoint(lg) {
+        margin-bottom: 45px;
+        font-size: 24px;
+    }
+}
+
+.contacts__address {
+
+    @include breakpoint(lg) {
+        display: flex;
+    }
+}
+
+.contacts__address ul ~ ul {
+
+    @include breakpoint(lg) {
+        margin-left: 100px;
+    }
+
+    @include breakpoint(xl) {
+        margin-left: 220px;
+    }
+}
+
+.contacts__address li {
+    display: flex;
+    align-items: center;
+}
+
+.contacts__address i {
+    margin-right: 15px;
+    font-size: 14px;
+    line-height: 140%;
+    color: #E0E0E0;
+}

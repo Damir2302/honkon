@@ -1,0 +1,80 @@
+.about-section-page {
+    padding: 75px 0 42px;
+
+    @include breakpoint(lg) {
+        padding: 100px 0 120px;
+    }
+}
+
+.about__block {
+
+    @include breakpoint(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.about__block ~ .about__block {
+    margin-top: 70px;
+
+    @include breakpoint(lg) {
+        margin-top: 120px;
+    }
+}
+
+.about-block__img {
+
+    @include breakpoint(xs) {
+        max-width: 400px;
+    }
+
+    @include breakpoint(lg) {
+        width: calc(((100% / 12) * 5) - 10px);
+        max-width: unset;
+    }
+}
+
+.about-block__img img {
+    object-fit: contain;
+}
+
+.about__block-info {
+
+    @include breakpoint(lg) {
+        width: calc(((100% / 12) * 5) - 10px);
+    }
+}
+
+.about__block-title {
+    margin: 35px 0 32px;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 150%;
+    color: #4B4B4B;
+
+    @include breakpoint(lg) {
+        font-size: 20px;
+    }
+}
+
+.about__block-text {
+    font-size: 20px;
+    line-height: 150%;
+    color: #4B4B4B;
+}
+
+.about__block ~ .about__block .about__block-text {
+    margin-left: 24px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.about__block ~ .about__block .about__block-text::before {
+    content: '';
+    background: linear-gradient(180deg, #543A83 0%, #7F62B2 100%);
+    position: absolute;
+    left: -24px;
+    display: inline-block;
+    width: 2px;
+    height: 100%;
+}
