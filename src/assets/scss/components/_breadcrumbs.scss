@@ -1,6 +1,11 @@
 .breadcrumbs {
+    background-size: cover;
     position: relative;
     height: 270px;
+
+    @include breakpoint(lg) {
+        background-position: 100% 50%;
+    }
 
     @include breakpoint(xl) {
         height: 474px;

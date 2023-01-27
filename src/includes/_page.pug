@@ -58,11 +58,13 @@ html(lang="ru")
                         .p-form-row
                             label E-mail
                             .input-style
-                                input(type="email" placeholder="Куда прислать счет?" autocomplete="off")
+                                input(type="email" placeholder="E-mail" autocomplete="off")
 
                         .p-form__check
 
-                            .check-icon
+                            .check-agreement
+                                input#agreement(type="checkbox" required checked)
+                                label(for="agreement")
 
                             p Даю согласие на обработку <br><a href="#">персональных данных</a>
 

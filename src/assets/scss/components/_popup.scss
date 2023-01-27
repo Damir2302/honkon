@@ -80,7 +80,7 @@
 
 .p-form__check {
     position: absolute;
-    bottom: 20px;
+    bottom: 0;
     display: flex;
 
     @include breakpoint(md) {
@@ -99,14 +99,26 @@
     color: #7F62B2;
 }
 
-.check-icon {
+.check-agreement {
     margin-right: 16px;
+}
+
+.check-agreement input {
+    display: none;
+}
+
+.check-agreement label {
     padding: 5px;
-    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMS4zODI4IDAuODY3MTg4QzExLjUyMzQgMS4wMDc4MSAxMS41MjM0IDEuMjY1NjIgMTEuMzgyOCAxLjQwNjI1TDUuMDA3ODEgNy43ODEyNUM0Ljg2NzE5IDcuOTIxODggNC42MDkzOCA3LjkyMTg4IDQuNDY4NzUgNy43ODEyNUwxLjA5Mzc1IDQuNDA2MjVDMC45NTMxMjUgNC4yNjU2MiAwLjk1MzEyNSA0LjAwNzgxIDEuMDkzNzUgMy44NjcxOUMxLjIzNDM4IDMuNzI2NTYgMS40OTIxOSAzLjcyNjU2IDEuNjMyODEgMy44NjcxOUw0Ljc1IDYuOTg0MzhMMTAuODQzOCAwLjg2NzE4OEMxMC45ODQ0IDAuNzI2NTYyIDExLjI0MjIgMC43MjY1NjIgMTEuMzgyOCAwLjg2NzE4OFoiIGZpbGw9IiM3RjYyQjIiLz4KPC9zdmc+Cg==') no-repeat;
-    background-position: center;
+    display: inline-block;
     width: 22px;
     height: 22px;
     border: 1px solid #E0E0E0;
+    cursor: pointer;
+}
+
+.check-agreement input:checked + label {
+    background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xMS4zODI4IDAuODY3MTg4QzExLjUyMzQgMS4wMDc4MSAxMS41MjM0IDEuMjY1NjIgMTEuMzgyOCAxLjQwNjI1TDUuMDA3ODEgNy43ODEyNUM0Ljg2NzE5IDcuOTIxODggNC42MDkzOCA3LjkyMTg4IDQuNDY4NzUgNy43ODEyNUwxLjA5Mzc1IDQuNDA2MjVDMC45NTMxMjUgNC4yNjU2MiAwLjk1MzEyNSA0LjAwNzgxIDEuMDkzNzUgMy44NjcxOUMxLjIzNDM4IDMuNzI2NTYgMS40OTIxOSAzLjcyNjU2IDEuNjMyODEgMy44NjcxOUw0Ljc1IDYuOTg0MzhMMTAuODQzOCAwLjg2NzE4OEMxMC45ODQ0IDAuNzI2NTYyIDExLjI0MjIgMC43MjY1NjIgMTEuMzgyOCAwLjg2NzE4OFoiIGZpbGw9IiM3RjYyQjIiLz4KPC9zdmc+Cg==') no-repeat;
+    background-position: center;
 }
 
 .p-form__textarea label {

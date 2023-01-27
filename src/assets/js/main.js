@@ -37,4 +37,19 @@ $(document).ready(function() {
     })
     // Header scroll::End
 
+    // VIDEO на главной
+    $('.play-icon').on('click', function() {
+        $(this).parent().addClass('play')
+        $('#video')[0].play()
+        $('#video')[0].controls = true
+    })
+
+    var vid = document.getElementById('video');
+
+    vid.addEventListener('ended', function(e) {
+        this.load()
+        $('.play-icon').parent().removeClass('play')
+        $('#video')[0].controls = false
+      }, false);
+
 });
