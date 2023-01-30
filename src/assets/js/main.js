@@ -46,10 +46,12 @@ $(document).ready(function() {
 
     var vid = document.getElementById('video');
 
+    if ($('#video').length) {
     vid.addEventListener('ended', function(e) {
         this.load()
         $('.play-icon').parent().removeClass('play')
         $('#video')[0].controls = false
-      }, false);
+    }, false);
+    }
 
 });
